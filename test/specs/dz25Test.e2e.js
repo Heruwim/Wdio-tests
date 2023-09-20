@@ -1,15 +1,15 @@
 import Dz25MainPage from "../pages/dz25.main.page.js";
 import dz25OrganizationsPage from "../pages/dz25.organizations.page.js";
-import Dz25SignUpPage from"../pages/dz25.signup.page.js";
+import Dz25SignUpPage from "../pages/dz25.signup.page.js";
 import Dz25ResourcesGitHabPage from "../pages/dz25.resources.page.js";
 import Dz25SearchPage from "../pages/dz25.search.page.js"
 import Dz25PricingPage from "../pages/dz25.pricing.page.js";
 
-describe("GitHub main page", () =>{
+describe("GitHub main page", () => {
 
-	xit("should show addValue command", async () =>{
+	xit("should show addValue command", async () => {
 		await browser.url(`https://github.com`);
-				
+
 		let emailValue = "superAQA@gmail.com";
 		let passwordValue = "SuperPassword45978";
 		let logindValue = "MegaAQA";
@@ -28,7 +28,7 @@ describe("GitHub main page", () =>{
 		Dz25SignUpPage.passwordInput(passwordValue);
 		await browser.pause(2000);
 		Dz25SignUpPage.clickOnContinueButton();
-		
+
 		await browser.pause(2000);
 		Dz25SignUpPage.loginInput(logindValue);
 		await browser.pause(2000);
@@ -41,12 +41,12 @@ describe("GitHub main page", () =>{
 
 	});
 
-	xit("should show start a free enterprise trial test", async () =>{
+	xit("should show start a free enterprise trial test", async () => {
 		await browser.url(`https://github.com`);
 		const headerText = "The place for anyone from anywhere to build anything";
 		const h1Text = 'Pick your trial plan';
 
-		Dz25MainPage.scrollToObject(Dz25MainPage.h2Link,"center");
+		Dz25MainPage.scrollToObject(Dz25MainPage.h2Link, "center");
 		await browser.pause(2000);
 		expect(Dz25MainPage.h2Link).toHaveText(headerText);
 		Dz25MainPage.isVisible(Dz25MainPage.startFreeTrialLink);
@@ -56,7 +56,7 @@ describe("GitHub main page", () =>{
 	});
 
 
-xit("should show start test3", async () =>{
+	xit("should show start test3", async () => {
 		await browser.url(`https://github.com`);
 
 		const expectedUrl = 'https://resources.github.com/newsletter/';
@@ -71,7 +71,7 @@ xit("should show start test3", async () =>{
 		await browser.pause(1000);
 		Dz25ResourcesGitHabPage.compareUrlWithExpected(expectedUrl);
 		await browser.pause(1000);
-		Dz25ResourcesGitHabPage.isTextAvailable(Dz25ResourcesGitHabPage.h1Link,expectedHeader);
+		Dz25ResourcesGitHabPage.isTextAvailable(Dz25ResourcesGitHabPage.h1Link, expectedHeader);
 		await browser.pause(1000);
 		Dz25ResourcesGitHabPage.scrollToObject(Dz25ResourcesGitHabPage.sectionCountry, "center");
 		await browser.pause(1000);
@@ -89,7 +89,7 @@ xit("should show start test3", async () =>{
 		await browser.pause(4000);
 	});
 
-	xit("should show start test4", async () =>{
+	xit("should show start test4", async () => {
 		await browser.url(`https://github.com`);
 		Dz25MainPage.clickOnElement(Dz25MainPage.burgerButton);
 		await browser.pause(1000);
@@ -103,7 +103,7 @@ xit("should show start test3", async () =>{
 		await browser.pause(3000);
 	});
 
-	it("should show start test5", async () =>{
+	it("should show start test5", async () => {
 		await browser.url(`https://github.com`);
 		Dz25MainPage.clickOnElement(Dz25MainPage.burgerButton);
 		await browser.pause(1000);
@@ -117,10 +117,5 @@ xit("should show start test3", async () =>{
 		await browser.pause(1000);
 		Dz25PricingPage.isTextAvailable();
 		await browser.pause(3000);
-
-
-	
 	});
-
-
 });

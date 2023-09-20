@@ -13,19 +13,19 @@ class Dz25ResourcesGitHabPage {
 		await expect(browser).toHaveUrl(expectedUrl);
 	}
 	async isTextAvailable(linkValue, expectedTextValue) {
-		await expect(linkValue).toHaveText(expectedTextValue);		
+		await expect(linkValue).toHaveText(expectedTextValue);
 	}
-	async emailInput(emailValue){
+	async emailInput(emailValue) {
 		await this.emailInputValue.setValue(emailValue)
 	}
-	async setCountrylValue(){
+	async setCountrylValue() {
 		await this.sectionCountry.setValue(this.countryInputValue)
 	}
 	async clickOnElement(value) {
 		await value.click();
 	}
 	async scrollToObject(value, display = "start") {
-		await value.scrollIntoView({block: display});
+		await value.scrollIntoView({ block: display });
 	}
 
 }

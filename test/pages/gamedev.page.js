@@ -1,9 +1,9 @@
 class GameDevPage {
 
-	get companyGameDevsRateLink() {return $('//*[text()="Рейтинг найбільших гемдев-компаній"]')}
-	get topGamesRateLink() {return $('//*[text()="Топ ігор місяця"]')}
+	get companyGameDevsRateLink() { return $('//*[text()="Рейтинг найбільших гемдев-компаній"]') }
+	get topGamesRateLink() { return $('//*[text()="Топ ігор місяця"]') }
 
-	async clickOnTopGamesRateLink(){
+	async clickOnTopGamesRateLink() {
 		await this.topGamesRateLink.click()
 	}
 }

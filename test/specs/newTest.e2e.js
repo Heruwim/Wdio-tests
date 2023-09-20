@@ -3,9 +3,9 @@ import GameDevPage from "../pages/gamedev.page.js";
 import GamedevTopratesPage from "../pages/gamedevToprates.page.js";
 
 
-describe("Webdriverio main page", () =>{
+describe("Webdriverio main page", () => {
 
-	xit("should show addValue command", async () =>{
+	xit("should show addValue command", async () => {
 		await browser.url(`https://dou.ua/`);
 
 		await MainPage.clickOnBandBtn()
