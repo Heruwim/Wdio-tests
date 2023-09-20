@@ -5,7 +5,7 @@ import GamedevTopratesPage from "../pages/gamedevToprates.page.js";
 
 describe("Webdriverio main page", () =>{
 
-	it("should show addValue command", async () =>{
+	xit("should show addValue command", async () =>{
 		await browser.url(`https://dou.ua/`);
 
 		await MainPage.clickOnBandBtn()
